@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyFlow | نظّم قرايتك</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">S</div>
+
+            <div>
+                <h2>StudyFlow</h2>
+                <span>Study smarter</span>
+            </div>
+        </div>
+
+        <nav>
+            <button class="nav-item active">
+                🏠
+                <span>الرئيسية</span>
+            </button>
+
+            <button class="nav-item">
+                📚
+                <span>المواد</span>
+            </button>
+
+            <button class="nav-item">
+                📊
+                <span>التقدم</span>
+            </button>
+
+            <button class="nav-item">
+                ⚙️
+                <span>الإعدادات</span>
+            </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="mini-card">
+                <span>🎯</span>
+                <div>
+                    <strong>هدفك اليوم</strong>
+                    <small>استمر ولا تستسلم</small>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <span class="date" id="todayDate"></span>
+                <h1>مرحباً بك 👋</h1>
+            </div>
+
+            <div class="header-actions">
+
+                <button id="themeButton" class="icon-button">
+                    🌙
+                </button>
+
+                <div class="profile">
+                    <div class="avatar">W</div>
+
+                    <div>
+                        <strong>طالب</strong>
+                        <small>جاهز للتعلم</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- Hero -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">✨ خطتك الدراسية تبدأ هنا</span>
+
+                <h2>
+                    نظّم وقتك،
+                    <br>
+                    <span>وتقدّم كل يوم.</span>
+                </h2>
+
+                <p>
+                    StudyFlow يساعدك على تنظيم مهامك،
+                    التركيز في دراستك ومتابعة تقدمك.
+                </p>
+
+                <button class="primary-button" id="focusButton">
+                    ⏱️ ابدأ جلسة تركيز
+                </button>
+
+            </div>
+
+            <div class="hero-circle">
+                <div class="circle-inner">
+                    🎓
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">🎯</div>
+
+                <div>
+                    <span>مهام اليوم</span>
+                    <strong>
+                        <span id="completedCount">0</span> / 6
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">⏱️</div>
+
+                <div>
+                    <span>وقت التركيز</span>
+                    <strong id="focusTime">00:00</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">🔥</div>
+
+                <div>
+                    <span>أيام متواصلة</span>
+                    <strong>1 يوم</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Content Grid -->
+        <section class="content-grid">
+
+            <!-- Tasks -->
+            <div class="panel tasks-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="section-label">اليوم</span>
+                        <h3>📝 مهام الدراسة</h3>
+                    </div>
+
+                    <button id="addTaskButton" class="add-button">
+                        + إضافة
+                    </button>
+
+                </div>
+
+
+                <div id="tasksList" class="tasks-list">
+
+                    <label class="task">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+
+                        <div class="task-info">
+                            <strong>مراجعة الرياضيات</strong>
+                            <small>تمارين الدرس</small>
+                        </div>
+
+                        <span class="subject math">رياضيات</span>
+                    </label>
+
+
+                    <label class="task">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+
+                        <div class="task-info">
+                            <strong>قراءة الفرنسية</strong>
+                            <small>مراجعة النص</small>
+                        </div>
+
+                        <span class="subject french">فرنسية</span>
+                    </label>
+
+
+                    <label class="task">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+
+                        <div class="task-info">
+                            <strong>تعلم JavaScript</strong>
+                            <small>مراجعة المتغيرات</small>
+                        </div>
+
+                        <span class="subject tech">إعلامية</span>
+                    </label>
+
+
+                    <label class="task">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+
+                        <div class="task-info">
+                            <strong>مراجعة الإنجليزية</strong>
+                            <small>10 كلمات جديدة</small>
+                        </div>
+
+                        <span class="subject english">إنجليزية</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- Focus Timer -->
+            <div class="panel timer-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <span class="section-label">Focus Mode</span>
+                        <h3>⏱️ جلسة التركيز</h3>
+                    </div>
+
+                </div>
+
+
+                <div class="timer">
+
+                    <div class="timer-circle">
+
+                        <div>
+                            <strong id="timerDisplay">25:00</strong>
+                            <span>تركيز</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timer-controls">
+
+                    <button id="startTimer" class="primary-button">
+                        ▶ ابدأ
+                    </button>
+
+                    <button id="resetTimer" class="secondary-button">
+                        ↻ إعادة
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Bottom -->
+        <section class="bottom-grid">
+
+            <div class="tip-card">
+
+                <div class="tip-icon">💡</div>
+
+                <div>
+                    <span>نصيحة اليوم</span>
+
+                    <h3>
+                        ركّز على مهمة واحدة في كل مرة.
+                    </h3>
+
+                    <p>
+                        التقدم الصغير كل يوم يصنع فرقاً كبيراً.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="progress-card">
+
+                <div class="progress-top">
+
+                    <div>
+                        <span>تقدم اليوم</span>
+                        <strong id="progressText">0%</strong>
+                    </div>
+
+                    <span>📈</span>
+
+                </div>
+
+                <div class="progress-bar">
+                    <div id="progressBar"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            <span>© 2026 StudyFlow</span>
+            <span>Study smarter. Every day. 🚀</span>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
